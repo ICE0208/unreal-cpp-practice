@@ -8,6 +8,8 @@ AMyActor::AMyActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+    
+    UE_LOG(LogTemp, Log, TEXT("Constructor [my log]"));
 
 }
 
@@ -15,13 +17,16 @@ AMyActor::AMyActor()
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+    
+    UE_LOG(LogTemp, Log, TEXT("BeginPlay [my log]"));
 }
 
 // Called every frame
 void AMyActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+    
+    UE_LOG(LogTemp, Log, TEXT("Tick [my log]"));
 
 }
 
