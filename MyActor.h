@@ -14,6 +14,17 @@ class CPPPRACTICE_API AMyActor : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMyActor();
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Damage")
+        int32 TotalDamage;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Damage")
+        float DamageTimeInSeconds;
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Transient, Category="Damage")
+        float DamagePerSecond;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+        FString CharacterName;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+        bool bAttackable;
 
 protected:
 	// Called when the game starts or when spawned
